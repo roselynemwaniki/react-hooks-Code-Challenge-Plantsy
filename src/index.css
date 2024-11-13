@@ -99,14 +99,18 @@ input:focus {
 
 .cards {
   list-style: none;
+  display: flex;
 }
 
 .card {
   margin: 1rem;
+  display: flex;
 }
 
 .card img {
-  width: 100%;
+  width: 20%;
+  height: 20px;
+  display: grid;
 }
 
 .card button {
@@ -121,6 +125,8 @@ input:focus {
 
   .card {
     width: calc(33% - 2rem);
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -134,4 +140,18 @@ input:focus {
   .card {
     width: calc(20% - 2rem);
   }
-}
+} 
+  img {
+    width: 30vh;
+    height: 40vh;
+    display: table-column;
+    flex-direction: column;
+ }
+
+ @media (max-width: 768px) {
+  .plant-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ }
