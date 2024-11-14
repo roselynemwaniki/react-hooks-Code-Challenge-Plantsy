@@ -9,7 +9,7 @@ function App() {
 
   // Fetch plants from the backend
   useEffect(() => {
-    fetch("http://localhost:6001/plants")
+    fetch("https://react-hooks-code-challenge-plantsy.onrender.com/plants")
       .then((res) => res.json())
       .then((data) => setPlants(data))
       .catch((error) => console.error("Failed to fetch plants:", error));
@@ -23,7 +23,7 @@ function App() {
 
   // Delete a plant
   const handleDeletePlant = (id) => {
-    fetch(`http://localhost:6001/plants/${id}`, {
+    fetch(`https://react-hooks-code-challenge-plantsy.onrender.com/plants/${id}`, {
       method: "DELETE",
     }).then(() => {
       setPlants((prevPlants) => prevPlants.filter((plant) => plant.id !== id));

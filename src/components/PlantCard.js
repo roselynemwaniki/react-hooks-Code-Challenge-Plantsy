@@ -6,7 +6,7 @@ function PlantCard({ plant, onDeletePlant, onUpdatePlant }) {
 
   // Handle Delete
   const handleDelete = () => {
-    fetch(`http://localhost:6001/plants/${id}`, {
+    fetch(`https://react-hooks-code-challenge-plantsy.onrender.com/plants/${id}`, {
       method: "DELETE",
     }).then(() => {
       onDeletePlant(id);
@@ -17,7 +17,7 @@ function PlantCard({ plant, onDeletePlant, onUpdatePlant }) {
   const handleUpdate = () => {
     const updatedData = { soldOut: !isSoldOut };
 
-    fetch(`http://localhost:6001/plants/${id}`, {
+    fetch(`https://react-hooks-code-challenge-plantsy.onrender.com/plants/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

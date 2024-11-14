@@ -9,7 +9,7 @@ function NewPlantForm({ onAddPlant }) {
     e.preventDefault();
     const newPlant = { name, image, price: parseFloat(price), soldOut: false };
 
-    fetch("http://localhost:6001/plants", {
+    fetch("https://react-hooks-code-challenge-plantsy.onrender.com/plants", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
